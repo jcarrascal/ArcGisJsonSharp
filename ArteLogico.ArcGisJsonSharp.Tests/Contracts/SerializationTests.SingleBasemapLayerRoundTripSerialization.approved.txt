@@ -1,0 +1,15 @@
+﻿{
+  "operationalLayers": [],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "defaultBasemap",
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Topo_Map/MapServer"
+      }
+    ],
+    "title": "Topographic"
+  },
+  "version": "1.6"
+}
