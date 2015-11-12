@@ -4,6 +4,8 @@
     {
         public string Id { get; set; }
 
+        public bool IsReference { get; set; }
+
         public int Opacity { get; set; }
 
         public bool Visibility { get; set; }

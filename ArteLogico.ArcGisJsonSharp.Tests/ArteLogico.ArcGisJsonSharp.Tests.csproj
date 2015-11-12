@@ -81,7 +81,10 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Contracts\SingleBasemapLayer.json">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contracts\TwoBasemapLayers.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
@@ -93,6 +96,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Contracts\SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt" />
+    <Content Include="Contracts\SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

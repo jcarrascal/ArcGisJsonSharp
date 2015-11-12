@@ -1,0 +1,31 @@
+﻿{
+  "operationalLayers": [
+    {
+      "url": "http://server.arcgisonline.com/ArcGIS/rest/services/Demographics/USA_Median_Age/MapServer",
+      "id": "USA_Median_Age_6919",
+      "visibility": true,
+      "opacity": 0.56,
+      "title": "USA Median Age",
+      "itemId": "fce0ca8972ae4268bc4a69443b8d1ef5"
+    }
+  ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "World_Light_Gray_Base_7270",
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer"
+      },
+      {
+        "id": "World_Light_Gray_Reference_6243",
+        "isReference": true,
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer"
+      }
+    ],
+    "title": "Light Gray Canvas"
+  },
+  "version": "1.6"
+}
