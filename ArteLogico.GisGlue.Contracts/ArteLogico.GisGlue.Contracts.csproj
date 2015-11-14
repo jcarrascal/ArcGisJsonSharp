@@ -41,6 +41,7 @@
   <ItemGroup>
     <Compile Include="BaseMap.cs" />
     <Compile Include="BaseMapLayer.cs" />
+    <Compile Include="OperationalLayer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebMap.cs" />
   </ItemGroup>
