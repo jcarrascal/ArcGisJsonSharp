@@ -6,8 +6,8 @@
     <ProjectGuid>{E40869A8-FA01-4EC8-BEF1-B561F66FA1DE}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ArteLogico.ArcGisJsonSharp.Tests</RootNamespace>
-    <AssemblyName>ArteLogico.ArcGisJsonSharp.Tests</AssemblyName>
+    <RootNamespace>ArteLogico.GisGlue.Tests</RootNamespace>
+    <AssemblyName>ArteLogico.GisGlue.Tests</AssemblyName>
     <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{3AC096D0-A1C2-E12C-1390-A8335801FDAB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
@@ -89,9 +89,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\ArteLogico.ArcGisJsonSharp.Contracts\ArteLogico.ArcGisJsonSharp.Contracts.csproj">
+    <ProjectReference Include="..\ArteLogico.GisGlue.Contracts\ArteLogico.GisGlue.Contracts.csproj">
       <Project>{78ee825c-90a4-4349-bc0d-fa545a194a2c}</Project>
-      <Name>ArteLogico.ArcGisJsonSharp.Contracts</Name>
+      <Name>ArteLogico.GisGlue.Contracts</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

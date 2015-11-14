@@ -1,12 +1,12 @@
 ﻿using ApprovalTests;
 using ApprovalTests.Reporters;
-using ArteLogico.ArcGisJsonSharp.Contracts;
+using ArteLogico.GisGlue.Contracts;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using NUnit.Framework;
 using System.IO;
 
-namespace ArteLogico.ArcGisJsonSharp.Tests.Contracts
+namespace ArteLogico.GisGlue.Tests.Contracts
 {
     [TestFixture]
     [UseReporter(typeof(DiffReporter))]

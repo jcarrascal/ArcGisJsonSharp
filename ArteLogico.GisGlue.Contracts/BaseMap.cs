@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace ArteLogico.ArcGisJsonSharp.Contracts
+namespace ArteLogico.GisGlue.Contracts
 {
     /// <summary>
     /// A BaseMap provides the geographic context of a web map.

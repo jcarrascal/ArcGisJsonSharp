@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.23107.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArteLogico.ArcGisJsonSharp.Contracts", "ArteLogico.ArcGisJsonSharp.Contracts\ArteLogico.ArcGisJsonSharp.Contracts.csproj", "{78EE825C-90A4-4349-BC0D-FA545A194A2C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArteLogico.GisGlue.Contracts", "ArteLogico.GisGlue.Contracts\ArteLogico.GisGlue.Contracts.csproj", "{78EE825C-90A4-4349-BC0D-FA545A194A2C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArteLogico.ArcGisJsonSharp.Tests", "ArteLogico.ArcGisJsonSharp.Tests\ArteLogico.ArcGisJsonSharp.Tests.csproj", "{E40869A8-FA01-4EC8-BEF1-B561F66FA1DE}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArteLogico.GisGlue.Tests", "ArteLogico.GisGlue.Tests\ArteLogico.GisGlue.Tests.csproj", "{E40869A8-FA01-4EC8-BEF1-B561F66FA1DE}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

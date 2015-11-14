@@ -4,11 +4,11 @@ using System.Resources;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ArteLogico.ArcGisJsonSharp.Contracts")]
+[assembly: AssemblyTitle("ArteLogico.GisGlue.Contracts")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ArteLogico.ArcGisJsonSharp.Contracts")]
+[assembly: AssemblyProduct("ArteLogico.GisGlue.Contracts")]
 [assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

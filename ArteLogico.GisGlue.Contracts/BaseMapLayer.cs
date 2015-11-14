@@ -1,4 +1,4 @@
-﻿namespace ArteLogico.ArcGisJsonSharp.Contracts
+﻿namespace ArteLogico.GisGlue.Contracts
 {
     /// <summary>
     /// A layer that provides geographic context to the map.
