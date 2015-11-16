@@ -8,10 +8,8 @@ namespace ArteLogico.GisGlue.Contracts
     /// </summary>
     public class WebMap
     {
-        public List<OperationalLayer> OperationalLayers { get; private set; } = new List<OperationalLayer>();
-
         public BaseMap BaseMap { get; set; }
-
+        public List<OperationalLayer> OperationalLayers { get; private set; } = new List<OperationalLayer>();
         public string Version { get; set; } = "1.6";
     }
 }

@@ -2,7 +2,6 @@
 using ApprovalTests.Reporters;
 using ArteLogico.GisGlue.Contracts;
 using Newtonsoft.Json;
-using Newtonsoft.Json.Serialization;
 using NUnit.Framework;
 using System.IO;
 
@@ -18,11 +17,7 @@ namespace ArteLogico.GisGlue.Tests.Contracts
             // Based on a sample given by ArcGIS on
             // http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Single_basemap_layer/02qt00000016000000/
             string expected = File.ReadAllText(@"Contracts\SingleBasemapLayer.json");
-            var serializer = new JsonSerializer()
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                DefaultValueHandling = DefaultValueHandling.Ignore
-            };
+            var serializer = JsonHelper.CreateSerializer();
 
             string result;
             using (var reader = new StringReader(expected))
@@ -45,11 +40,7 @@ namespace ArteLogico.GisGlue.Tests.Contracts
             // Based on a sample given by ArcGIS on
             // http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Two_basemap_layers/02qt00000015000000/
             string expected = File.ReadAllText(@"Contracts\TwoBasemapLayers.json");
-            var serializer = new JsonSerializer()
-            {
-                ContractResolver = new CamelCasePropertyNamesContractResolver(),
-                DefaultValueHandling = DefaultValueHandling.Ignore
-            };
+            var serializer = JsonHelper.CreateSerializer();
 
             string result;
             using (var reader = new StringReader(expected))

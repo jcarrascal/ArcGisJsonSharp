@@ -44,6 +44,14 @@
         public string Type { get; set; }
 
         /// <summary>
+        /// Gets or sets the URL to the layer.
+        /// </summary>
+        /// <value>
+        /// The URL.
+        /// </value>
+        public string Url { get; set; }
+
+        /// <summary>
         /// Gets or sets a value indicating whether the layer is initially
         /// visible in the web map.
         /// </summary>
@@ -51,13 +59,5 @@
         ///   <c>true</c> if visibility; otherwise, <c>false</c>.
         /// </value>
         public bool Visibility { get; set; }
-
-        /// <summary>
-        /// Gets or sets the URL to the layer.
-        /// </summary>
-        /// <value>
-        /// The URL.
-        /// </value>
-        public string Url { get; set; }
     }
 }

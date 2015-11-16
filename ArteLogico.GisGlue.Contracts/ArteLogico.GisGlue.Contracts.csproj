@@ -41,7 +41,15 @@
   <ItemGroup>
     <Compile Include="BaseMap.cs" />
     <Compile Include="BaseMapLayer.cs" />
+    <Compile Include="Extent.cs" />
+    <Compile Include="ExtentConverter.cs" />
+    <Compile Include="FeatureCollection.cs" />
+    <Compile Include="JsonHelper.cs" />
+    <Compile Include="Layer.cs" />
+    <Compile Include="LayerDefinition.cs" />
+    <Compile Include="LocationInfo.cs" />
     <Compile Include="OperationalLayer.cs" />
+    <Compile Include="PopupInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WebMap.cs" />
   </ItemGroup>
