@@ -17,20 +17,8 @@ namespace ArteLogico.GisGlue.Tests.Contracts
             // Based on a sample given by ArcGIS on
             // http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Single_basemap_layer/02qt00000016000000/
             string expected = File.ReadAllText(@"Contracts\SingleBasemapLayer.json");
-            var serializer = JsonHelper.CreateSerializer();
-
-            string result;
-            using (var reader = new StringReader(expected))
-            using (var jsonReader = new JsonTextReader(reader))
-            using (var writer = new StringWriter())
-            using (var jsonWriter = new JsonTextWriter(writer))
-            {
-                jsonWriter.Formatting = Formatting.Indented;
-                var webMap = serializer.Deserialize<WebMap>(jsonReader);
-                serializer.Serialize(jsonWriter, webMap);
-                result = writer.ToString();
-            }
-
+            var webMap = JsonHelper.Deserialize<WebMap>(expected);
+            string result = JsonHelper.Serialize(webMap, Formatting.Indented);
             Approvals.Verify(result);
         }
 
@@ -40,20 +28,8 @@ namespace ArteLogico.GisGlue.Tests.Contracts
             // Based on a sample given by ArcGIS on
             // http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Two_basemap_layers/02qt00000015000000/
             string expected = File.ReadAllText(@"Contracts\TwoBasemapLayers.json");
-            var serializer = JsonHelper.CreateSerializer();
-
-            string result;
-            using (var reader = new StringReader(expected))
-            using (var jsonReader = new JsonTextReader(reader))
-            using (var writer = new StringWriter())
-            using (var jsonWriter = new JsonTextWriter(writer))
-            {
-                jsonWriter.Formatting = Formatting.Indented;
-                var webMap = serializer.Deserialize<WebMap>(jsonReader);
-                serializer.Serialize(jsonWriter, webMap);
-                result = writer.ToString();
-            }
-
+            var webMap = JsonHelper.Deserialize<WebMap>(expected);
+            string result = JsonHelper.Serialize(webMap, Formatting.Indented);
             Approvals.Verify(result);
         }
     }

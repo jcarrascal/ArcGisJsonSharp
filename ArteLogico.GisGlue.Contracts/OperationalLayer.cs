@@ -41,6 +41,14 @@ namespace ArteLogico.GisGlue.Contracts
         public float[][] Extent { get; set; }
 
         /// <summary>
+        /// Gets or sets the feature collection.
+        /// </summary>
+        /// <value>
+        /// The feature collection.
+        /// </value>
+        public FeatureCollection FeatureCollection { get; set; }
+
+        /// <summary>
         /// Gets or sets the image format to be requested to the WMS.
         /// </summary>
         /// <value>
