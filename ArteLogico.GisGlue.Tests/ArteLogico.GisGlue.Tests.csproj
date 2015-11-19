@@ -81,7 +81,13 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Contracts\OperationalLayer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
     <None Include="Contracts\SingleBasemapLayer.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Contracts\SingleOperationalLayer.json">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="Contracts\TwoBasemapLayers.json">
@@ -96,7 +102,10 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Contracts\ExtentConverterTests.WriteJson_WhenSerializingAnExtent_ThenTheFormatMatchesTheExample.approved.txt" />
+    <Content Include="Contracts\SerializationTests.OperationalLayerRoundTripSerialization.approved.txt" />
     <Content Include="Contracts\SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt" />
+    <Content Include="Contracts\SerializationTests.SingleOperationalLayerRoundTripSerialization.approved.txt" />
     <Content Include="Contracts\SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt" />
   </ItemGroup>
   <Choose>

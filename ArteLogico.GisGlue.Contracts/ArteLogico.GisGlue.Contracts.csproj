@@ -41,6 +41,9 @@
   <ItemGroup>
     <Compile Include="BaseMap.cs" />
     <Compile Include="BaseMapLayer.cs" />
+    <Compile Include="Bookmark.cs" />
+    <Compile Include="BookmarkExtent.cs" />
+    <Compile Include="DrawingInfo.cs" />
     <Compile Include="Extent.cs" />
     <Compile Include="ExtentConverter.cs" />
     <Compile Include="FeatureCollection.cs" />
@@ -51,6 +54,10 @@
     <Compile Include="OperationalLayer.cs" />
     <Compile Include="PopupInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderer.cs" />
+    <Compile Include="RotationType.cs" />
+    <Compile Include="SpatialReference.cs" />
+    <Compile Include="Symbol.cs" />
     <Compile Include="WebMap.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
