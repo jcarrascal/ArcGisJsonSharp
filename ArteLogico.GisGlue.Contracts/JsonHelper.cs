@@ -21,6 +21,7 @@ namespace ArteLogico.GisGlue.Contracts
                 DefaultValueHandling = DefaultValueHandling.Ignore,
             };
             serializer.Converters.Add(new ExtentConverter());
+            serializer.Converters.Add(new ColorConverter());
             return serializer;
         }
 

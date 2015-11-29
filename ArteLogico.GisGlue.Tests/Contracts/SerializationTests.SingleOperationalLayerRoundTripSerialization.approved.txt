@@ -23,7 +23,6 @@
       "layerDefinition": {
         "drawingInfo": {
           "renderer": {
-            "type": "simple",
             "symbol": {
               "color": [ 108, 151, 203, 0 ],
               "outline": {
@@ -34,7 +33,8 @@
               },
               "type": "esriSFS",
               "style": "esriSFSSolid"
-            }
+            },
+            "type": "simple"
           }
         },
         "minScale": 500000000,

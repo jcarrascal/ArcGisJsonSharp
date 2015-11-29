@@ -43,8 +43,10 @@
     <Compile Include="BaseMapLayer.cs" />
     <Compile Include="Bookmark.cs" />
     <Compile Include="BookmarkExtent.cs" />
+    <Compile Include="Color.cs" />
     <Compile Include="DrawingInfo.cs" />
     <Compile Include="Extent.cs" />
+    <Compile Include="ColorConverter.cs" />
     <Compile Include="ExtentConverter.cs" />
     <Compile Include="FeatureCollection.cs" />
     <Compile Include="JsonHelper.cs" />
