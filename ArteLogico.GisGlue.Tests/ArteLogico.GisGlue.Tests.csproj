@@ -52,8 +52,8 @@
       <HintPath>..\packages\Newtonsoft.Json.7.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="nunit.framework, Version=2.6.4.14350, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
-      <HintPath>..\packages\NUnit.2.6.4\lib\nunit.framework.dll</HintPath>
+    <Reference Include="nunit.framework, Version=3.0.5813.39031, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <HintPath>..\packages\NUnit.3.0.1\lib\net45\nunit.framework.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Rhino.Mocks, Version=3.6.0.0, Culture=neutral, PublicKeyToken=0b3305902db7183f, processorArchitecture=MSIL">
@@ -75,6 +75,7 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
+    <Compile Include="Helper.cs" />
     <Compile Include="Contracts\ColorConverterTests.cs" />
     <Compile Include="Contracts\ExtentConverterTests.cs" />
     <Compile Include="Contracts\SerializationTests.cs" />
@@ -82,18 +83,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
-    <None Include="Contracts\OperationalLayer.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Contracts\SingleBasemapLayer.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Contracts\SingleOperationalLayer.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
-    <None Include="Contracts\TwoBasemapLayers.json">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -103,11 +92,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Contracts\ColorConverterTestsApprovals\ColorConverterTests.ReadJsonWriteJson_WhenSerializingAColor_ThenTheFormatMatchesTheExample.approved.txt" />
     <Content Include="Contracts\ExtentConverterTests.WriteJson_WhenSerializingAnExtent_ThenTheFormatMatchesTheExample.approved.txt" />
-    <Content Include="Contracts\SerializationTests.OperationalLayerRoundTripSerialization.approved.txt" />
-    <Content Include="Contracts\SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt" />
-    <Content Include="Contracts\SerializationTests.SingleOperationalLayerRoundTripSerialization.approved.txt" />
-    <Content Include="Contracts\SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.FeatureServiceOperationalLayersRoundtripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.OperationalLayerRoundTripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.SingleOperationalLayerRoundTripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

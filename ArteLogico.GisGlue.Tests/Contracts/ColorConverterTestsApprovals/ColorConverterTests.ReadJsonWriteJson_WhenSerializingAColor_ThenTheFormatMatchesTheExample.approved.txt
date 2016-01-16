@@ -1,0 +1,1 @@
+﻿ArteLogico.GisGlue.Contracts.Color [108, 151, 203, 0]

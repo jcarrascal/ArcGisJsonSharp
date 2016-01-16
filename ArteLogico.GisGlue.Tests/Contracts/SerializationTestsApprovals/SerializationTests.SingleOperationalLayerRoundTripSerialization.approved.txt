@@ -1,28 +1,16 @@
 ﻿{
-  "baseMap": {
-    "baseMapLayers": [
-      {
-        "id": "World_Light_Gray_Base_7739",
-        "opacity": 1,
-        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer",
-        "visibility": true
-      },
-      {
-        "id": "World_Light_Gray_Reference_241",
-        "isReference": true,
-        "opacity": 1,
-        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer",
-        "visibility": true
-      }
-    ],
-    "title": "Light Gray Canvas"
-  },
   "operationalLayers": [
     {
+      "url": "http://sampleserver6.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer/1",
       "id": "WorldTimeZones_717",
+      "visibility": true,
+      "opacity": 0.78,
+      "mode": 1,
+      "title": "World Time Zones",
       "layerDefinition": {
         "drawingInfo": {
           "renderer": {
+            "type": "simple",
             "symbol": {
               "color": [ 108, 151, 203, 0 ],
               "outline": {
@@ -33,15 +21,12 @@
               },
               "type": "esriSFS",
               "style": "esriSFSSolid"
-            },
-            "type": "simple"
+            }
           }
         },
         "minScale": 500000000,
         "maxScale": 0
       },
-      "mode": 1,
-      "opacity": 0.78,
       "popupInfo": {
         "title": "Offset from UTC: {ZONE}",
         "fieldInfos": [
@@ -113,11 +98,26 @@
         "description": null,
         "showAttachments": true,
         "mediaInfos": [ ]
-      },
-      "title": "World Time Zones",
-      "url": "http://sampleserver6.arcgisonline.com/arcgis/rest/services/WorldTimeZones/MapServer/1",
-      "visibility": true
+      }
     }
   ],
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "World_Light_Gray_Base_7739",
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer"
+      },
+      {
+        "id": "World_Light_Gray_Reference_241",
+        "isReference": true,
+        "opacity": 1,
+        "visibility": true,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Reference/MapServer"
+      }
+    ],
+    "title": "Light Gray Canvas"
+  },
   "version": "1.6"
 }

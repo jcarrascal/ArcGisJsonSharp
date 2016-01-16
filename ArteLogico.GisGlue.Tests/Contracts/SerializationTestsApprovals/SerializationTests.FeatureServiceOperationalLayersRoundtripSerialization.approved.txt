@@ -1,0 +1,335 @@
+﻿{
+  "baseMap": {
+    "baseMapLayers": [
+      {
+        "id": "World_Imagery_2704",
+        "opacity": 1,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer",
+        "visibility": true
+      },
+      {
+        "id": "World_Boundaries_and_Places_2640",
+        "isReference": true,
+        "opacity": 1,
+        "url": "http://services.arcgisonline.com/ArcGIS/rest/services/Reference/World_Boundaries_and_Places/MapServer",
+        "visibility": true
+      }
+    ],
+    "title": "Imagery with Labels"
+  },
+  "operationalLayers": [
+    {
+      "id": "Geology_8280",
+      "mode": 1,
+      "opacity": 1.0,
+      "popupInfo": {
+        "description": null,
+        "fieldInfos": [
+          {
+            "fieldName": "objectid",
+            "isEditable": false,
+            "label": "Objectid",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "emp_id",
+            "isEditable": true,
+            "label": "Employee Id",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "fault_type",
+            "isEditable": true,
+            "label": "Fault Type",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "fault_subtype",
+            "isEditable": true,
+            "label": "Fault Subtype",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "classification_confidence",
+            "isEditable": true,
+            "label": "Confidence In Classifcation",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "fault_basis",
+            "isEditable": true,
+            "label": "Fault Basis",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "shear_criteria",
+            "isEditable": true,
+            "label": "Shear Criteria",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "strike",
+            "isEditable": true,
+            "label": "Strike",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "dip",
+            "isEditable": true,
+            "label": "Dip",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "dipdirection",
+            "isEditable": true,
+            "label": "Dipdirection",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "plunge",
+            "isEditable": true,
+            "label": "Plunge",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "trend",
+            "isEditable": true,
+            "label": "Trend",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "rake",
+            "isEditable": true,
+            "label": "Rake",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "confidence_measure",
+            "isEditable": true,
+            "label": "Confidence Of Measurement",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "measurement_method",
+            "isEditable": true,
+            "label": "Measurement Method",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "comments",
+            "isEditable": true,
+            "label": "Comments",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "globalid",
+            "isEditable": false,
+            "label": "GlobalID",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          }
+        ],
+        "mediaInfos": [],
+        "showAttachments": true,
+        "title": "{fault_type}"
+      },
+      "title": "Faults",
+      "url": "http://sampleserver5.arcgisonline.com/arcgis/rest/services/Energy/Geology/FeatureServer/6",
+      "visibility": true
+    },
+    {
+      "id": "Geology_3137",
+      "mode": 1,
+      "opacity": 1.0,
+      "popupInfo": {
+        "description": null,
+        "fieldInfos": [
+          {
+            "fieldName": "objectid",
+            "isEditable": false,
+            "label": "Objectid",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "emp_id",
+            "isEditable": true,
+            "label": "Employee Id",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "fold_type",
+            "isEditable": true,
+            "label": "Fold Type",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "classification_confidence",
+            "isEditable": true,
+            "label": "Confidence In Classification",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "strike",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Strike",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "dip",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Dip",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "dipdirection",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Cipcirection",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "plunge",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Plunge",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "trend",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Trend",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "rake",
+            "format": {
+              "digitSeparator": true,
+              "places": 0
+            },
+            "isEditable": true,
+            "label": "Rake",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          },
+          {
+            "fieldName": "confidence_measurement",
+            "isEditable": true,
+            "label": "Confidence In Measurement",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "measurement_method",
+            "isEditable": true,
+            "label": "Measurement Method",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "comments",
+            "isEditable": true,
+            "label": "Comments",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "fold_subtype",
+            "isEditable": true,
+            "label": "Fold Subtype",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": true
+          },
+          {
+            "fieldName": "globalid",
+            "isEditable": false,
+            "label": "GlobalID",
+            "stringFieldOption": "textbox",
+            "tooltip": "",
+            "visible": false
+          }
+        ],
+        "mediaInfos": [],
+        "showAttachments": true,
+        "title": "{fold_type}"
+      },
+      "title": "Folds",
+      "url": "http://sampleserver5.arcgisonline.com/arcgis/rest/services/Energy/Geology/FeatureServer/7",
+      "visibility": true
+    }
+  ],
+  "version": "1.6"
+}

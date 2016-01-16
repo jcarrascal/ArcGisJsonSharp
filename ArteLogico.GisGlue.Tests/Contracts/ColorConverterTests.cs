@@ -1,4 +1,5 @@
 ﻿using ApprovalTests;
+using ApprovalTests.Namers;
 using ApprovalTests.Reporters;
 using ArteLogico.GisGlue.Contracts;
 using Newtonsoft.Json;
@@ -9,12 +10,13 @@ namespace ArteLogico.GisGlue.Tests.Contracts
 {
     [TestFixture]
     [UseReporter(typeof(DiffReporter))]
+    [UseApprovalSubdirectory("ColorConverterTestsApprovals")]
     public class ColorConverterTests
     {
         [Test]
         public void ReadJsonWriteJson_WhenSerializingAColor_ThenTheFormatMatchesTheExample()
         {
-            string example = "[ 108, 151, 203, 0 ]";
+            string example = "[108,151,203,0]";
             Color color;
             var serializer = JsonHelper.CreateSerializer();
 
@@ -24,7 +26,6 @@ namespace ArteLogico.GisGlue.Tests.Contracts
             using (var reader = new StringReader(example))
             using (var jsonReader = new JsonTextReader(reader))
             {
-                jsonWriter.Formatting = Formatting.Indented;
                 color = serializer.Deserialize<Color>(jsonReader);
                 serializer.Serialize(jsonWriter, color);
                 result = writer.ToString();

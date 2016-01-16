@@ -49,6 +49,8 @@
     <Compile Include="ColorConverter.cs" />
     <Compile Include="ExtentConverter.cs" />
     <Compile Include="FeatureCollection.cs" />
+    <Compile Include="FieldInfo.cs" />
+    <Compile Include="FieldInfoFormat.cs" />
     <Compile Include="JsonHelper.cs" />
     <Compile Include="Layer.cs" />
     <Compile Include="LayerDefinition.cs" />

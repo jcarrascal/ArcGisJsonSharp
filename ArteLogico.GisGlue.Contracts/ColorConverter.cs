@@ -8,9 +8,7 @@ namespace ArteLogico.GisGlue.Contracts
         /// <summary>
         /// Gets a value indicating whether this instance can read.
         /// </summary>
-        /// <value>
-        ///   <c>true</c> if this instance can read; otherwise, <c>false</c>.
-        /// </value>
+        /// <value><c>true</c> if this instance can read; otherwise, <c>false</c>.</value>
         public override bool CanRead
         {
             get
@@ -22,9 +20,7 @@ namespace ArteLogico.GisGlue.Contracts
         /// <summary>
         /// Gets a value indicating whether this instance can write.
         /// </summary>
-        /// <value>
-        ///   <c>true</c> if this instance can write; otherwise, <c>false</c>.
-        /// </value>
+        /// <value><c>true</c> if this instance can write; otherwise, <c>false</c>.</value>
         public override bool CanWrite
         {
             get
@@ -37,7 +33,9 @@ namespace ArteLogico.GisGlue.Contracts
         /// Determines whether this instance can convert the specified object type.
         /// </summary>
         /// <param name="objectType">Type of the object.</param>
-        /// <returns>A value indicating whther this instance can convert the specified object type.</returns>
+        /// <returns>
+        /// A value indicating whther this instance can convert the specified object type.
+        /// </returns>
         public override bool CanConvert(Type objectType)
         {
             return typeof(Color) == objectType;
@@ -57,6 +55,7 @@ namespace ArteLogico.GisGlue.Contracts
             int? g = reader.ReadAsInt32();
             int? b = reader.ReadAsInt32();
             int? a = reader.ReadAsInt32();
+            reader.Skip();
             if (r.HasValue && g.HasValue && b.HasValue && a.HasValue)
             {
                 return new Color { R = (byte)r.Value, G = (byte)g.Value, B = (byte)b.Value, A = (byte)a.Value };
