@@ -55,8 +55,7 @@ namespace ArteLogico.GisGlue.Contracts
             int? g = reader.ReadAsInt32();
             int? b = reader.ReadAsInt32();
             int? a = reader.ReadAsInt32();
-            reader.Skip();
-            if (r.HasValue && g.HasValue && b.HasValue && a.HasValue)
+            if (reader.Read() && r.HasValue && g.HasValue && b.HasValue && a.HasValue)
             {
                 return new Color { R = (byte)r.Value, G = (byte)g.Value, B = (byte)b.Value, A = (byte)a.Value };
             }

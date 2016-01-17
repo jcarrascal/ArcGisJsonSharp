@@ -11,17 +11,13 @@ namespace ArteLogico.GisGlue.Contracts
         /// <summary>
         /// Gets or sets the color.
         /// </summary>
-        /// <value>
-        /// The color.
-        /// </value>
+        /// <value>The color.</value>
         public Color Color { get; set; }
 
         /// <summary>
         /// Gets or sets the type.
         /// </summary>
-        /// <value>
-        /// The type.
-        /// </value>
+        /// <value>The type.</value>
         public string Type { get; set; }
     }
 }

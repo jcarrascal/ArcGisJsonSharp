@@ -83,6 +83,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <EmbeddedResource Include="Contracts\ColorConverterTestsApprovals\ColorConverterTests.RoundTripSerialization_WhenGivenAColorContainer_ThenMatchesTheInput.approved.txt" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
@@ -92,13 +93,13 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Contracts\ColorConverterTestsApprovals\ColorConverterTests.ReadJsonWriteJson_WhenSerializingAColor_ThenTheFormatMatchesTheExample.approved.txt" />
+    <EmbeddedResource Include="Contracts\ColorConverterTestsApprovals\ColorConverterTests.RoundTripSerialization_WhenGivenAColor_ThenMatchesTheInput.approved.txt" />
     <Content Include="Contracts\ExtentConverterTests.WriteJson_WhenSerializingAnExtent_ThenTheFormatMatchesTheExample.approved.txt" />
-    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.FeatureServiceOperationalLayersRoundtripSerialization.approved.txt" />
-    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.OperationalLayerRoundTripSerialization.approved.txt" />
-    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt" />
-    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.SingleOperationalLayerRoundTripSerialization.approved.txt" />
-    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.RoundTripSerialization_WhenGivenAWebMapWithFeatureServiceOperationalLayers_ThenMatchesTheInput.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.RoundTripSerialization_WhenGivenAWebMapWithAnOperationalLayer_ThenMatchesTheInput.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.RoundTripSerialization_WhenGivenAWebMapWithASingleBasemapLayer_ThenMatchesTheInput.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.RoundTripSerialization_WhenGivenAWebMapWithASingleOperationalLayer_ThenMatchesTheInput.approved.txt" />
+    <EmbeddedResource Include="Contracts\SerializationTestsApprovals\SerializationTests.RoundTripSerialization_WhenGivenAWebMapWithTwoBasemapLayers_ThenMatchesTheInput.approved.txt" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -14,25 +14,23 @@ namespace ArteLogico.GisGlue.Tests.Contracts
     public class ColorConverterTests
     {
         [Test]
-        public void ReadJsonWriteJson_WhenSerializingAColor_ThenTheFormatMatchesTheExample()
+        public void RoundTripSerialization_WhenGivenAColor_ThenMatchesTheInput()
         {
-            string example = "[108,151,203,0]";
-            Color color;
-            var serializer = JsonHelper.CreateSerializer();
+            this.CheckRoundTripSerialization<Color>("ColorConverterTestsApprovals");
+        }
 
-            string result;
-            using (var writer = new StringWriter())
-            using (var jsonWriter = new JsonTextWriter(writer))
-            using (var reader = new StringReader(example))
-            using (var jsonReader = new JsonTextReader(reader))
-            {
-                color = serializer.Deserialize<Color>(jsonReader);
-                serializer.Serialize(jsonWriter, color);
-                result = writer.ToString();
-            }
+        [Test]
+        public void RoundTripSerialization_WhenGivenAColorContainer_ThenMatchesTheInput()
+        {
+            /*var cont = new ColorContainer { Background = new Color { R = 100 } };
+            string result = JsonHelper.Serialize(cont, Formatting.Indented);
+            System.Console.WriteLine(result);*/
+            this.CheckRoundTripSerialization<ColorContainer>("ColorConverterTestsApprovals");
+        }
 
-            Approvals.Verify(color);
-            Assert.That(result, Is.EqualTo(example));
+        public class ColorContainer
+        {
+            public Color Background { get; set; }
         }
     }
 }

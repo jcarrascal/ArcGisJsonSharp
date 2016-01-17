@@ -13,52 +13,38 @@ namespace ArteLogico.GisGlue.Tests.Contracts
     public class SerializationTests
     {
         [Test]
-        public void FeatureServiceOperationalLayersRoundtripSerialization()
-        {
-            // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/ArcGIS_feature_service_operational_layers/02qt00000017000000/
-            string resourceName = @"ArteLogico.GisGlue.Tests.Contracts.SerializationTestsApprovals.SerializationTests.FeatureServiceOperationalLayersRoundtripSerialization.approved.txt";
-            CheckRoundtripSerialization(resourceName);
-        }
-
-        [Test]
-        public void OperationalLayerRoundTripSerialization()
+        public void RoundTripSerialization_WhenGivenAWebMapWithAnOperationalLayer_ThenMatchesTheInput()
         {
             // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/ArcGIS_map_service_operational_layer/02qt00000018000000/
-            string resourceName = @"ArteLogico.GisGlue.Tests.Contracts.SerializationTestsApprovals.SerializationTests.OperationalLayerRoundTripSerialization.approved.txt";
-            CheckRoundtripSerialization(resourceName);
+            this.CheckRoundTripSerialization<WebMap>("SerializationTestsApprovals");
         }
 
         [Test]
-        public void SingleBasemapLayerRoundTripSerialization()
+        public void RoundTripSerialization_WhenGivenAWebMapWithASingleBasemapLayer_ThenMatchesTheInput()
         {
             // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Single_basemap_layer/02qt00000016000000/
-            string resourceName = @"ArteLogico.GisGlue.Tests.Contracts.SerializationTestsApprovals.SerializationTests.SingleBasemapLayerRoundTripSerialization.approved.txt";
-            CheckRoundtripSerialization(resourceName);
+            this.CheckRoundTripSerialization<WebMap>("SerializationTestsApprovals");
         }
 
         [Test]
-        public void SingleOperationalLayerRoundTripSerialization()
+        public void RoundTripSerialization_WhenGivenAWebMapWithASingleOperationalLayer_ThenMatchesTheInput()
         {
             // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Single_layer_from_an_ArcGIS_map_service_as_an_operational_layer/02qt0000001m000000/
-            string resourceName = @"ArteLogico.GisGlue.Tests.Contracts.SerializationTestsApprovals.SerializationTests.SingleOperationalLayerRoundTripSerialization.approved.txt";
-            CheckRoundtripSerialization(resourceName);
+            this.CheckRoundTripSerialization<WebMap>("SerializationTestsApprovals");
         }
 
         [Test]
-        public void TwoBasemapLayerRoundTripSerialization()
+        public void RoundTripSerialization_WhenGivenAWebMapWithFeatureServiceOperationalLayers_ThenMatchesTheInput()
         {
-            // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Two_basemap_layers/02qt00000015000000/
-            string resourceName = @"ArteLogico.GisGlue.Tests.Contracts.SerializationTestsApprovals.SerializationTests.TwoBasemapLayerRoundTripSerialization.approved.txt";
-            CheckRoundtripSerialization(resourceName);
+            // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/ArcGIS_feature_service_operational_layers/02qt00000017000000/
+            this.CheckRoundTripSerialization<WebMap>("SerializationTestsApprovals");
         }
 
-        private static void CheckRoundtripSerialization(string resourceName)
+        [Test]
+        public void RoundTripSerialization_WhenGivenAWebMapWithTwoBasemapLayers_ThenMatchesTheInput()
         {
-            string expected = Helper.ReadAllText(resourceName);
-            var webMap = JsonHelper.Deserialize<WebMap>(expected);
-            string result = JsonHelper.Serialize(webMap, Formatting.Indented);
-            Approvals.Verify(result);
-            Assert.That(result, Is.EqualTo(expected));
+            // Based on a sample given by Esri on http://resources.arcgis.com/en/help/arcgis-web-map-json/index.html#/Two_basemap_layers/02qt00000015000000/
+            this.CheckRoundTripSerialization<WebMap>("SerializationTestsApprovals");
         }
     }
 }

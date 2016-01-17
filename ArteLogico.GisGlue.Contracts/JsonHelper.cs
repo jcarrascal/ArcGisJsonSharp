@@ -67,7 +67,7 @@ namespace ArteLogico.GisGlue.Contracts
             {
                 jsonWriter.Formatting = formatting;
                 serializer.Serialize(jsonWriter, obj);
-                return writer.ToString(); ;
+                return writer.ToString();
             }
         }
 
